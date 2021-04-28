@@ -1,0 +1,95 @@
+:-dynamic(fact/1),
+[forward, basedados, baseconhecimento].
+
+inicio:- nl,nl , 	write('********************************************************************************************************'), nl,
+				write('**                                                                                                    **'), nl,			 
+				write('**               Aqui vai conseguir encontrar os pratos que mais se aqeduam a sua dieta               **'), nl,
+				write('**   Vamos comecar por fazer algumas pergunta, num instante tera a indicacao do prato ideal para si!  **'), nl, 
+				write('**                                                                                                    **'), nl,			 
+				write('********************************************************************************************************'), nl,
+				write('**   Menu:'), nl,
+				write('**'), nl,
+				write('**   1- Iniciar'), nl,
+				write('**   2- Sair'), nl,nl,
+				read(Y),
+				seguirQuestionario(Y).
+
+seguirQuestionario(1):- etapa1.
+seguirQuestionario(2):- write('Até sempre!'), halt.
+seguirQuestionario(other):- write('Introduza uma opcao valida por favor'), inicio.
+
+etapa1:-	write('********************************************************************************************************'), nl,
+			write('**  Qual a sua faixa etaria?'), nl,
+			write('**'),nl,
+			write('**  1 - 16 aos 35'), nl,
+			write('**  2 - 36 aos 60'), nl,
+			write('**  3 - Mais de 61'), nl,nl,
+			read(E1),
+			(
+			(E1 == 1), assert(fact(faixa16_35)), etapa2;
+            (E1 == 2), assert(fact(faixa36_60)), etapa2;
+            (E1 == 3), assert(fact(faixa61_mais)), etapa2).
+
+etapa2:-	write('********************************************************************************************************'), nl,
+			write('**  Pratica algum tipo de dieta?'), nl,
+			write('**'),nl,
+			write('**  1 - Sim, vegetariana.'), nl,
+			write('**  2 - Sim, vegan.'), nl,
+			write('**  3 - Sim, baixa em calorias.'), nl,
+			write('**  4 - Nao pratico nenhum tipo de dieta.'), nl, nl,
+			read(E2),
+			(
+			(E2 == 1), assert(fact(vegetariano)), resultado;
+            (E2 == 2), assert(fact(vegan)), resultado;
+            (E2 == 3), assert(fact(baixo_calorias)), resultado;
+			(E2 == 4), etapa3).
+
+etapa3:-	write('********************************************************************************************************'), nl,
+			write('**  Qual destas preferencias gastronomicas se adequa melhor a si?'), nl,
+			write('**'),nl,
+			write('**  1 - Comida Regional.'), nl,
+			write('**  2 - Comida Oriental.'), nl,
+			write('**  3 - Fast Food.'), nl,
+			write('**  4 - Comida Internacional.'), nl, nl,
+			read(E3),
+			(
+			(E3 == 1), assert(fact(regional)), etapa4;
+            (E3 == 2), assert(fact(oriental)), etapa4;
+            (E3 == 3), assert(fact(fast_food)), etapa4;
+			(E3 == 4), assert(fact(internacional)), etapa4).
+
+etapa4:-	write('********************************************************************************************************'), nl,
+			write('**  Considera-se uma pessoa que:'), nl,
+			write('**'),nl,
+			write('**  1 - Valoriza a qualidade em prol do preco.'), nl,
+			write('**  2 - Realiza analises custo-beneficio.'), nl,
+			write('**  3 - Atribui grande importancia ao preco.'), nl, nl,
+			read(E4),
+			(
+			(E4 == 1), assert(fact(qualidade)), etapa5;
+            (E4 == 2), assert(fact(custo_beneficio)), etapa5;
+            (E4 == 3), assert(fact(preco)), etapa5).
+
+etapa5:-	write('********************************************************************************************************'), nl,
+			write('**  Qual destes contextos se enquadra melhor na sua situacao?'), nl,
+			write('**'),nl,
+			write('**  1 - Jantar com amigos'), nl,
+			write('**  2 - Jantar romantico'), nl,nl,
+			read(E5),
+			(
+			(E5 == 1), assert(fact(jantar_amigos)), resultado;
+            (E5 == 2), assert(fact(jantar_romantico)), resultado).
+			
+			
+resultado :- 	write('********************************************************************************************************'), nl,
+				write('**                                                                                                    **'), nl,			 
+				write('**                                      Pratos Recomendados                                           **'), nl, 
+				write('**                                                                                                    **'), nl,			 
+				write('********************************************************************************************************'),
+				procura.
+
+resultadoprocura(P):- nl, nl,
+					write('     Pratos Recomendados: '),perfil(P),nl,nl,
+					write('********************************************************************************************************').
+					
+
