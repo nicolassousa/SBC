@@ -1,5 +1,5 @@
 :-dynamic(fact/1),
-[forward, basedados, baseconhecimento].
+[forward, baseDados, ifthen_rules].
 
 inicio:- write('\33\[2J'), nl,nl ,write(' ______________________________________________________________________________________________________'), nl,
 				write('|                                                                                                      |'), nl,			 
@@ -26,14 +26,12 @@ etapa1:-	write(' _______________________________________________________________
 			write('|                                                                                                      |'),nl,
 			write('|  1 - 16 aos 35                                                                                       |'), nl,
 			write('|  2 - 36 aos 60                                                                                       |'), nl,
-			write('|  3 - Mais de 61                                                                                      |'), nl,
 			write('|______________________________________________________________________________________________________|'), nl,nl,
 			read(E1),
 			 write('\33\[2J'),
 			(
-			(E1 == 1), assert(fact(faixa16_35)), etapa2;
-            (E1 == 2), assert(fact(faixa36_60)), etapa2;
-            (E1 == 3), assert(fact(faixa61_mais)), etapa2).
+			(E1 == 1), assert(fact(faixa_faixa16_35)), etapa2;
+            (E1 == 2), assert(fact(faixa_faixa36_60)), etapa2).
 
 etapa2:-	write(' ______________________________________________________________________________________________________'), nl,
 			write('|                                                                                                      |'), nl,
@@ -47,9 +45,9 @@ etapa2:-	write(' _______________________________________________________________
 			read(E2),
 			write('\33\[2J'),
 			(
-			(E2 == 1), assert(fact(vegetariano)), resultado;
-            (E2 == 2), assert(fact(vegan)), resultado;
-            (E2 == 3), assert(fact(baixo_calorias)), resultado;
+			(E2 == 1), assert(fact(dieta_vegetariano)), resultado;
+            (E2 == 2), assert(fact(dieta_vegan)), resultado;
+            (E2 == 3), assert(fact(dieta_baixo_calorias)), resultado;
 			(E2 == 4), etapa3).
 
 etapa3:-	write(' ______________________________________________________________________________________________________'), nl,
@@ -64,10 +62,10 @@ etapa3:-	write(' _______________________________________________________________
 			read(E3),
 			write('\33\[2J'),
 			(
-			(E3 == 1), assert(fact(regional)), etapa4;
-            (E3 == 2), assert(fact(oriental)), etapa4;
-            (E3 == 3), assert(fact(fast_food)), etapa4;
-			(E3 == 4), assert(fact(internacional)), etapa4).
+			(E3 == 1), assert(fact(preferencias_gastronomicas_regional)), etapa4;
+            (E3 == 2), assert(fact(preferencias_gastronomicas_oriental)), etapa4;
+            (E3 == 3), assert(fact(preferencias_gastronomicas_fast_food)), etapa4;
+			(E3 == 4), assert(fact(preferencias_gastronomicas_internacional)), etapa4).
 
 etapa4:-	write(' ______________________________________________________________________________________________________'), nl,
 			write('|                                                                                                      |'), nl,
@@ -80,9 +78,9 @@ etapa4:-	write(' _______________________________________________________________
 			read(E4),
 			write('\33\[2J'),
 			(
-			(E4 == 1), assert(fact(qualidade)), etapa5;
-            (E4 == 2), assert(fact(custo_beneficio)), etapa5;
-            (E4 == 3), assert(fact(preco)), etapa5).
+			(E4 == 1), assert(fact(preco_qualidade)), etapa5;
+            (E4 == 2), assert(fact(preco_custo_beneficio)), etapa5;
+            (E4 == 3), assert(fact(preco_preco)), etapa5).
 
 etapa5:-	write(' ______________________________________________________________________________________________________'), nl,
 			write('|                                                                                                      |'), nl,
@@ -94,8 +92,8 @@ etapa5:-	write(' _______________________________________________________________
 			read(E5),
 			write('\33\[2J'),
 			(
-			(E5 == 1), assert(fact(jantar_amigos)), resultado;
-            (E5 == 2), assert(fact(jantar_romantico)), resultado).
+			(E5 == 1), assert(fact(contexto_amigos)), resultado;
+            (E5 == 2), assert(fact(contexto_romantico)), resultado).
 			
 			
 resultado :- 	write(' ______________________________________________________________________________________________________'), nl,

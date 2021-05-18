@@ -4,13 +4,13 @@ prato('Feijao a Moda do Porto com Arroz Integral', 'Semente Art Coffee & Plant B
 prato('Fitoque - bife de frango', 'Eat Fit', 9.8, 'Low Carbs', baixo_calorias, [preco, custo_beneficio, qualidade], [jantar_amigos, jantar_romantico], [faixa16_35, faixa36_60, faixa61_mais]).
 prato('Arroz de Pato', 'Continente' , 2.99 , 'Regional', regional, [preco], [jantar_amigos], [faixa16_35]).
 prato('Tabua de Salmao', 'Cafe do Luis' , 5.5 , 'Regional', regional, [preco], [jantar_romantico] , [faixa16_35, faixa36_60]).
-prato('Francesinha Especial de Bife de Novilho', 'Taberna Londrina', 12 , 'Regional\n', regional, [custo_beneficio, qualidade], [jantar_amigos, jantar_romantico], [faixa16_35, faixa36_60]).
+prato('Francesinha Especial de Bife de Novilho', 'Taberna Londrina', 12 , 'Regional', regional, [custo_beneficio, qualidade], [jantar_amigos, jantar_romantico], [faixa16_35, faixa36_60]).
 prato('Bacalhau Espiritual', 'Gato do Rio', 14.9, 'Regional', regional, [custo_beneficio, qualidade], [jantar_amigos, jantar_romantico], [faixa36_60, faixa61_mais]).
 prato('Rojoes com batata frita ao cubo', 'Arte na Brasa 2', 6.9, 'Regional', regional, [preco], [jantar_amigos, jantar_romantico], [faixa36_60, faixa61_mais]).
 prato('Noodles', 'Otsu Biru', 5.5, 'Comida japonesa', oriental, [preco], [jantar_amigos], [faixa16_35, faixa36_60, faixa61_mais]).
 prato('Temaki de Salmao', 'Otsu Biru', 5.5, 'Comida Japonesa', oriental, [preco], [jantar_romantico], [faixa16_35, faixa36_60, faixa61_mais]).
-prato('Mix sushi to sashimi', 'Alma dEca', 40, 'Comida Japonesa', oriental, [qualidade], [jantar_amigos, jantar_romantico], [faixa16_35, faixa36_60, faixa61_mais]).
-prato('Hot Sushi de Gambas', 'Sushi Em Tua Casa', 12 , 'Comida Japonesa', oriental, [custo_beneficio], [jantar_amigos, jantar_romantico], [faixa16_35, 35_60, faixa61_mais]).
+prato('Mix sushi to sashimi', 'Alma dEca', 40, 'Comida Japonesa', oriental, [qualidade], [jantar_romantico], [faixa16_35, faixa36_60, faixa61_mais]).
+prato('Hot Sushi de Gambas', 'Sushi Em Tua Casa', 12 , 'Comida Japonesa', oriental, [custo_beneficio], [jantar_amigos], [faixa16_35, 35_60, faixa61_mais]).
 prato('Big Mac', 'McDonalds', 5.9, 'Fast Food', fast_food, [preco], [jantar_amigos], [faixa16_35]).
 prato('Balde Frango Duo 2', 'KFC', 7.80, 'Fast Food', fast_food, [preco], [jantar_romantico], [faixa16_35]).
 prato('Hamburguer Tripeiro', 'Degema', 10.05, 'Fast Food', fast_food, [custo_beneficio], [jantar_amigos, jantar_romantico], [faixa16_35, faixa36_60]).
@@ -66,12 +66,8 @@ perfil(3):- procurarPrato(regional,custo_beneficio,jantar_romantico,faixa16_35).
 perfil(4):- procurarPrato(regional,custo_beneficio,jantar_amigos,faixa16_35).
 perfil(5):- procurarPrato(regional,preco,jantar_romantico,faixa16_35).
 perfil(6):- procurarPrato(regional,preco,jantar_amigos,faixa16_35).
-perfil(7):- procurarPrato(oriental,qualidade,jantar_romantico,faixa16_35).
-perfil(8):- procurarPrato(oriental,qualidade,jantar_amigos,faixa16_35).
-perfil(9):- procurarPrato(oriental,custo_beneficio,jantar_romantico,faixa16_35).
-perfil(10):- procurarPrato(oriental,custo_beneficio,jantar_amigos,faixa16_35).
-perfil(11):- procurarPrato(oriental,preco,jantar_romantico,faixa16_35).
-perfil(12):- procurarPrato(oriental,preco,jantar_amigos,faixa16_35).
+perfil(7):- procurarPrato(oriental,_,_,faixa36_60).
+perfil(12):- procurarPrato(oriental,_,_,faixa16_35).
 perfil(13):- procurarPrato(fast_food,qualidade,jantar_romantico,faixa16_35).
 perfil(14):- procurarPrato(fast_food,qualidade,jantar_amigos,faixa16_35).
 perfil(15):- procurarPrato(fast_food,custo_beneficio,jantar_romantico,faixa16_35).
@@ -90,12 +86,6 @@ perfil(27):- procurarPrato(regional, custo_beneficio, jantar_romantico, faixa36_
 perfil(28):- procurarPrato(regional, custo_beneficio, jantar_amigos, faixa36_60).
 perfil(29):- procurarPrato(regional, preco, jantar_romantico, faixa36_60).
 perfil(30):- procurarPrato(regional, preco, jantar_amigos, faixa36_60).
-perfil(31):- procurarPrato(oriental, qualidade, jantar_romantico, faixa36_60).
-perfil(32):- procurarPrato(oriental, qualidade, jantar_amigos, faixa36_60).
-perfil(33):- procurarPrato(oriental, custo_beneficio, jantar_romantico, faixa36_60).
-perfil(34):- procurarPrato(oriental, custo_beneficio, jantar_amigos, faixa36_60).
-perfil(35):- procurarPrato(oriental, preco, jantar_romantico, faixa36_60).
-perfil(36):- procurarPrato(oriental, preco, jantar_amigos, faixa36_60).
 perfil(37):- procurarPrato(fast_food, qualidade, jantar_romantico, faixa36_60).
 perfil(38):- procurarPrato(fast_food, qualidade, jantar_amigos, faixa36_60).
 perfil(39):- procurarPrato(fast_food, custo_beneficio, jantar_romantico, faixa36_60).
