@@ -1,6 +1,8 @@
 :-dynamic(fact/1),
 [forward, baseDados, ifthen_rules].
 
+/*Nuno e Maria */
+
 inicio:- write('\33\[2J'), nl,nl ,write(' ______________________________________________________________________________________________________'), nl,
 				write('|                                                                                                      |'), nl,			 
 				write('|               Aqui vai conseguir encontrar os pratos que mais se aqeduam a sua dieta                 |'), nl,

@@ -1,6 +1,6 @@
 :-[search, baseDados].
-
-restaurant1(restaurante, [cliente1, cliente2, cliente3, cliente4, cliente5],[5,6,7,5,7]).
+/*Nicolas*/
+restaurant1(restaurante, [cliente1, cliente2, cliente3, cliente4, cliente5, cliente6, cliente7],[5,6,7,5,7,8,7]).
 
 % -- Objetivo1:
 initial(sol([E],[R])):- restaurant1(R,LE,_), random_member(E,LE).
@@ -20,6 +20,7 @@ eval([Client1,Client2|R],DS):-
     eval([Client2|R],DR),
     DS is D+DR.
 
+/*Henrique*/
 run(Method):- search(Method,Par,S),nl,nl,
           write(' ______________________________________________________________________________________________________'), nl,
           write('|                                                                                                      |'), nl,
@@ -46,10 +47,10 @@ escreverclientes(sol(LE,_)):- write(LE).
 
 escrevercaminho(sol(_,LC)):- write(LC).
 
+/*Nicolas*/
 % method to get client lucro:
 getLucro(sol(LE,_)):- member(A,LE),
 lucro(A,Y), write(Y).
-
 
 % write parameter (if any):
 writepar(X):- integer(X),write(' par:'),write(X). % write X

@@ -1,6 +1,8 @@
 :-dynamic(fact/1),
 [objetivo1].
 
+/*Nicolas*/
+
 inicio:- write('\33\[2J'),write(' ______________________________________________________________________________________________________'), nl,
 				write('|                                                                                                      |'), nl,			 
 				write('|                           Aqui podera obter o trajeto a realizar para a entrega                      |'), nl,              

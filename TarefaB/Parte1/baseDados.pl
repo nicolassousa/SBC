@@ -1,3 +1,4 @@
+/*Henrique*/
 %lucro(cliente, valor)
 lucro(restaurante, 0).
 lucro(cliente1, 5).
@@ -8,6 +9,7 @@ lucro(cliente5, 7).
 lucro(cliente6, 8).
 lucro(cliente7, 7).
 
+/*Nicolas*/
 %percurso(Origem, Destino, duracaoEmMin)
 percurso(restaurante, cliente1, 5).
 percurso(restaurante, cliente4, 7).

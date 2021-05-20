@@ -1,4 +1,5 @@
 /*prato(Nome, Restaurante, Preco, Tipo, Gastronomia, SensibilidadePreco, Contexto, idade)*/
+/*Henrique*/
 prato('Seitan salteado com bechamel de alho frances', 'Alfacinha', 5.5, 'Vegetariano', vegetariano, [preco, custo_beneficio, qualidade], [jantar_amigos, jantar_romantico], [faixa16_35, faixa36_60, faixa61_mais]).
 prato('Feijao a Moda do Porto com Arroz Integral', 'Semente Art Coffee & Plant Based Food', 9.5, 'Vegan', vegan, [preco, custo_beneficio, qualidade], [jantar_amigos, jantar_romantico], [faixa16_35, faixa36_60, faixa61_mais]).
 prato('Fitoque - bife de frango', 'Eat Fit', 9.8, 'Low Carbs', baixo_calorias, [preco, custo_beneficio, qualidade], [jantar_amigos, jantar_romantico], [faixa16_35, faixa36_60, faixa61_mais]).
@@ -35,6 +36,8 @@ prato('Rosbife a inglesa', 'Tia Isabel', 19, 'Comida Inglesa', internacional, [q
 prato('Crepe Scandinave', 'Crepes a Francesa', 7.5, 'Comida Francesa', internacional, [preco], [jantar_amigos, jantar_romantico], [faixa61_mais]).
 prato('Crepe Raclette', 'Crepes a Francesa', 7.5, 'Comida Francesa', internacional, [preco], [jantar_amigos, jantar_romantico], [faixa61_mais]).
 
+
+/*Nicolas*/
 membro( X, [X|_] ).
 membro( X, [_|R] ) :- membro( X, R ).
 
@@ -57,9 +60,9 @@ write(G),nl,
 nl,
 (is_empty(B) -> darPrint(B); write('_______________________________________________________________________')).
 
-
 is_empty(List):- member(_,List).
 
+/*Maria*/
 perfil(1):- procurarPrato(regional,qualidade,jantar_romantico,faixa16_35).
 perfil(2):- procurarPrato(regional,qualidade,jantar_amigos,faixa16_35).
 perfil(3):- procurarPrato(regional,custo_beneficio,jantar_romantico,faixa16_35).
@@ -75,6 +78,8 @@ perfil(12):- procurarPrato(oriental,preco,jantar_amigos,faixa16_35).
 perfil(13):- procurarPrato(fast_food,qualidade,jantar_romantico,faixa16_35).
 perfil(14):- procurarPrato(fast_food,qualidade,jantar_amigos,faixa16_35).
 perfil(15):- procurarPrato(fast_food,custo_beneficio,jantar_romantico,faixa16_35).
+
+/*Nuno*/
 perfil(16):- procurarPrato(fast_food,custo_beneficio,jantar_amigos,faixa16_35).
 perfil(17):- procurarPrato(fast_food,preco,jantar_romantico,faixa16_35).
 perfil(18):- procurarPrato(fast_food,preco,jantar_amigos,faixa16_35).
@@ -91,6 +96,8 @@ perfil(28):- procurarPrato(regional, custo_beneficio, jantar_amigos, faixa36_60)
 perfil(29):- procurarPrato(regional, preco, jantar_romantico, faixa36_60).
 perfil(30):- procurarPrato(regional, preco, jantar_amigos, faixa36_60).
 perfil(31):- procurarPrato(oriental, qualidade, jantar_romantico, faixa36_60).
+
+/*Henrique*/
 perfil(32):- procurarPrato(oriental, qualidade, jantar_amigos, faixa36_60).
 perfil(33):- procurarPrato(oriental, custo_beneficio, jantar_romantico, faixa36_60).
 perfil(34):- procurarPrato(oriental, custo_beneficio, jantar_amigos, faixa36_60).

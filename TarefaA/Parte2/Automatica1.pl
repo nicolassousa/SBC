@@ -1,5 +1,7 @@
 :-[preprocess], dynamic(example/2),dynamic(data/1).
 
+/*Nuno e Maria*/
+
 attribute(faixa, [faixa16_35, faixa36_60, faixa61_mais]).
 attribute(dieta, [baixo_calorias,nenhuma_dieta,vegan,vegetariano]).
 attribute(preferencias_gastronomicas, [regional, internacional, oriental, fast_food]).

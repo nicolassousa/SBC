@@ -1,3 +1,4 @@
+/*Maria*/
 if faixa16_35 and regional and qualidade and jantar_romantico then 1.
 if faixa16_35 and regional and qualidade and jantar_amigos then 2.
 if faixa16_35 and regional and custo_beneficio and jantar_romantico then 3.
@@ -23,6 +24,7 @@ if faixa16_35 and internacional and custo_beneficio and jantar_amigos then 22.
 if faixa16_35 and internacional and preco and jantar_romantico then 23.
 if faixa16_35 and internacional and preco and jantar_amigos then 24.
 
+/*Nuno*/
 if faixa36_60 and regional and qualidade and jantar_romantico then 25.
 if faixa36_60 and regional and qualidade and jantar_amigos then 26.
 if faixa36_60 and regional and custo_beneficio and jantar_romantico then 27.
@@ -48,6 +50,7 @@ if faixa36_60 and internacional and custo_beneficio and jantar_amigos then 46.
 if faixa36_60 and internacional and preco and jantar_romantico then 47.
 if faixa36_60 and internacional and preco and jantar_amigos then 48.
 
+/*Nicolas*/
 if faixa61_mais and regional and qualidade and jantar_romantico then 49.
 if faixa61_mais and regional and qualidade and jantar_amigos then 50.
 if faixa61_mais and regional and custo_beneficio and jantar_romantico then 51.
@@ -72,7 +75,6 @@ if faixa61_mais and internacional and custo_beneficio and jantar_romantico then 
 if faixa61_mais and internacional and custo_beneficio and jantar_amigos then 70.
 if faixa61_mais and internacional and preco and jantar_romantico then 71.
 if faixa61_mais and internacional and preco and jantar_amigos then 72.
-
 if vegetariano then 73.
 if vegan then 74.
 if baixo_calorias then 75.

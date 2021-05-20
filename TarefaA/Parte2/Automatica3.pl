@@ -1,5 +1,5 @@
 :-[satisfy,induce_ifthen,automatica2].
-
+/*Nuno e Maria*/
 learn_rules:-
 	learn(1),
     learn(2),

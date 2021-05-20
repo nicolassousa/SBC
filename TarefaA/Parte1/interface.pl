@@ -1,6 +1,7 @@
 :-dynamic(fact/1),
 [forward, basedados, baseconhecimento].
 
+/*Nicolas*/
 inicio:- write('\33\[2J'), nl,nl ,write(' ______________________________________________________________________________________________________'), nl,
 				write('|                                                                                                      |'), nl,			 
 				write('|               Aqui vai conseguir encontrar os pratos que mais se aqeduam a sua dieta                 |'), nl,
@@ -52,6 +53,7 @@ etapa2:-	write(' _______________________________________________________________
             (E2 == 3), assert(fact(baixo_calorias)), resultado;
 			(E2 == 4), etapa3).
 
+/*Nuno*/
 etapa3:-	write(' ______________________________________________________________________________________________________'), nl,
 			write('|                                                                                                      |'), nl,
 			write('| Qual destas preferencias gastronomicas se adequa melhor a si?                                        |'), nl,
