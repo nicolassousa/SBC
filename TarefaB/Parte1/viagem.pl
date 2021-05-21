@@ -1,10 +1,6 @@
 :-[search, baseDados].
 /*Nicolas*/
-restaurant1(restaurante, [cliente1, cliente2, cliente3, cliente4, cliente5, cliente6, cliente7],[5,6,7,5,7,8,7]).
-
-% -- Objetivo1:
-initial(sol([E],[R])):- restaurant1(R,LE,_), random_member(E,LE).
-goal(sol([E2],LC)):- last(LC,E2).
+restaurant(restaurante, [cliente1, cliente2, cliente3, cliente4, cliente5, cliente6, cliente7],[5,6,7,5,7,8,7]).
 
 % viagem(Client1,Client2,distance):
 viagem(X,Y,MIN):-(percurso(X,Y,MIN);percurso(Y,X,MIN)). % if percurso or symmetrical
@@ -46,11 +42,6 @@ escrevertempo(sol(_,LC)):- eval(LC,D), D2 is D+1,write(D2).
 escreverclientes(sol(LE,_)):- write(LE).
 
 escrevercaminho(sol(_,LC)):- write(LC).
-
-/*Nicolas*/
-% method to get client lucro:
-getLucro(sol(LE,_)):- member(A,LE),
-lucro(A,Y), write(Y).
 
 % write parameter (if any):
 writepar(X):- integer(X),write(' par:'),write(X). % write X
