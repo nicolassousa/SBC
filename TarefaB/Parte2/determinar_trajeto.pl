@@ -1,3 +1,4 @@
+/*Nicolas*/
 :-dynamic(resultado/1).
 :- set_prolog_flag(encoding, utf8).
 :- [base_dados, caminho_mais_rapido, hillclimbing].

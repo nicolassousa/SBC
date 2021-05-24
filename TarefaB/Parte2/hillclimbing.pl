@@ -1,3 +1,4 @@
+/*Nicolas*/
 % adaptado do material fornecido pelo docente
 :- dynamic(hbest_sofar/2).
 
