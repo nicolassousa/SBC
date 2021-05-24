@@ -69,6 +69,7 @@ Para executar qualquer parte deste projeto deverá abrir a interface e inserir o
   Objetivo 1: :white_check_mark:
   Objetivo 2: :white_check_mark:
 4. Tarefa B Parte 2: :white_circle:
+  Objetivo 1 -> HillClimbing: :white_check_mark:; Otimizacao Caminho(B)::white_check_mark:
 
 <!-- CONTRIBUTING -->
 ## Contribuidores
