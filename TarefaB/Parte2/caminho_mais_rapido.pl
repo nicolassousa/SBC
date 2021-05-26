@@ -9,8 +9,8 @@ caminho_mais_rapido(X,Y) :- caminho(X,Y,C),
     mais_rapido(X,Y,C).
 
 
-% percorre todos os caminho possiveis e verifica se existe algum caminho com maior numero de passageiros que o atual, 
-% se existir então dá falso, senão é verdadeiro e consequentemente o melhor caminho
+% percorre todos os caminho possiveis e verifica se existe algum caminho com menor distancia, 
+% se existir dá falso, senão é verdadeiro e consequentemente o melhor caminho
 mais_rapido(X,Y,C) :- distancia_total(C,D),!,
     \+ existe_mais_rapido(X,Y,D), write('Caminho mais rapido:'), write(C), nl, write('distancia:'), Dist is D + 1, write(Dist).
 
